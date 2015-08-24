@@ -11,3 +11,5 @@ sudo apt-get install docker.io
 
 
 All images should be self-contained and ready to use - just follow the instructions on the respective page.
+
+[Error correction](https://github.com/HullUni-bioinformatics/Dockerize/tree/master/error-correction)
