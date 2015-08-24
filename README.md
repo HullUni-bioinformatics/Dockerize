@@ -1,4 +1,13 @@
 # Dockerize
-This repository contains contexts for Docker images build for miscellaneous pieces of bioinformatics software.
+This repository contains contexts for Docker images built for miscellaneous pieces of bioinformatics software.
+
+To run the images you will need [Docker](https://www.docker.com/).
+
+Installing Docker in Ubuntu should be as easy as:
+
+```
+sudo apt-get install docker.io
+```
 
 
+All images should be self-contained and ready to use - just follow the instructions on the respective page.
