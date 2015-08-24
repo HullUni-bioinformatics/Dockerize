@@ -1,4 +1,4 @@
-# Using the Ubuntu image
+# Using the Debian image
 FROM debian:8.1
 
 MAINTAINER Christoph Hahn <chrisi.hahni@gmail.com>
