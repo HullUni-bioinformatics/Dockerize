@@ -23,16 +23,16 @@ Installing Docker in Ubuntu should be as easy as:
 sudo apt-get install docker.io
 ```
 
-The BLESS image can then be used as an executable. The following will fetch the image (only neccesary once) and execute BLESS:
+The BLESS image can then be used as an executable. The following will fetch the image from [Docker Hub](https://hub.docker.com/) `chrishah/bless` (takes a minute at first execution, then it will remain in memory until you remove it) and execute BLESS:
 ```
-sudo docker run -i -t -v $(WORKING_DIR):/home/working chrishah/bless
+sudo docker run -i -t -v $(pwd):/home/working chrishah/bless
 ```
 
-With the above command the directory `/home/working` in the container will be mounted to your present working directory `$(pwd)` on your local computer. 
+With the above command the directory `/home/working` in the container (do not change) will be mounted to your present working directory `$(pwd)` on your local computer (change the latter directory if you wish). 
 
 You may want to create an alias for the above command, e.g by typing:
 ```
-alias bless_docker="sudo docker run -i -t -v $(WORKING_DIR):/home/working chrishah/bless"
+alias bless_docker="sudo docker run -i -t -v $(pwd):/home/working chrishah/bless"
 ```
 
 or add the above code to your `~/.bashrc` and source by `. ~/.bashrc` to create a permanent alias.
