@@ -19,9 +19,6 @@ WORKDIR /src/bless
 RUN tar xvfz bless.v1p02.tgz
 WORKDIR /src/bless/v1p02
 RUN make
-ENV PATH $PATH:/src/bless/v1p02
-RUN echo 'alias bless="/src/bless/v1p02/bless"' > ~/.bashrc
-RUN . ~/.bashrc
 ADD docker_helper.sh /src/bless/v1p02/
 #
 
@@ -30,5 +27,4 @@ VOLUME /home/working
 RUN chmod -R a+rw /home/working
 
 ENTRYPOINT ["/src/bless/v1p02/docker_helper.sh"]
-#ENTRYPOINT ["/src/bless/v1p02/bless"]
 CMD [""]
