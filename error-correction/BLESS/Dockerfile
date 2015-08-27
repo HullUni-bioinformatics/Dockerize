@@ -19,7 +19,9 @@ WORKDIR /src/bless
 RUN tar xvfz bless.v1p02.tgz
 WORKDIR /src/bless/v1p02
 RUN make
-RUN ln -s /src/bless/v1p02/bless /usr/bin
+ENV PATH $PATH:/src/bless/v1p02
+RUN echo 'alias bless="/src/bless/v1p02/bless"' > ~/.bashrc
+RUN . ~/.bashrc
 #
 
 WORKDIR /home/working
