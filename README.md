@@ -1,4 +1,5 @@
 # Dockerize
+://github.com/HullUni-bioinformatics/Dockerize/tree/master/assembly
 This repository contains contexts for Docker images built for miscellaneous pieces of bioinformatics software.
 
 To run the images you will need [Docker](https://www.docker.com/).
@@ -15,5 +16,5 @@ __Featured software categories__
 
 - Read trimming
 - [Error correction](https://github.com/HullUni-bioinformatics/Dockerize/tree/master/error-correction)
-- Assembly
+- [Assembly](https://github.com/HullUni-bioinformatics/Dockerize/tree/master/assembly)
 
