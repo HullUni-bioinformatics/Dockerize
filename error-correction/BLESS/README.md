@@ -11,7 +11,7 @@ For more information on BLESS see the [BLESS paper](http://bioinformatics.oxford
 This image was built and pushed with:
 
 ```
-sudo docker build -t chrishah/bless .
+sudo docker build --network=host -t chrishah/bless .
 sudo docker push chrishah/bless
 ```
 
