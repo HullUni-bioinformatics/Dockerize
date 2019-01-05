@@ -34,15 +34,15 @@ Exit the container by typing 'exit'.
 The BLESS images can also be used as executable, like so:
 ```
 #Display the usage information of BLESS
-sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless
+sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless bless
 
 #Example run
-sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless -read in.fastq -prefix directory/prefix -kmerlength 31
+sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless bless -read in.fastq -prefix directory/prefix -kmerlength 31
 ```
 
 You may want to create an alias for the above docker container, e.g by typing:
 ```
-alias bless_docker="sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless"
+alias bless_docker="sudo docker run --rm -i -t -v $(pwd):/home/working chrishah/bless bless"
 ```
 
 or add the above code to your `~/.bashrc` and source by `. ~/.bashrc` to create a permanent alias.
