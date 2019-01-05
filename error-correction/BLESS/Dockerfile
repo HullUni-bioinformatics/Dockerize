@@ -19,6 +19,7 @@ RUN wget -P /src/bless/ http://sourceforge.net/projects/bless-ec/files/bless.v1p
 	ln -s $(pwd)/bless /bin/ && \
 	ln -s $(pwd)/kmc/bin/kmc /bin/
 
+ADD bless_iterate_over_ks.sh /bin/ 
 #WORKDIR /src/bless/v1p02
 ###RUN cp -rf /src/bless/v1p02/* /bin/
 ###WORKDIR /bin
