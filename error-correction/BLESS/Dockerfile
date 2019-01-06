@@ -16,26 +16,20 @@ RUN wget -P /src/bless/ http://sourceforge.net/projects/bless-ec/files/bless.v1p
 	tar xvfz bless.v1p02.tgz && \
 	cd v1p02 && \
 	make && \
-	ln -s $(pwd)/bless /bin/ && \
 	ln -s $(pwd)/kmc/bin/kmc /bin/
+#	ln -s $(pwd)/bless /bin/ && \
 
 ADD bless_iterate_over_ks.sh /bin/ 
-#WORKDIR /src/bless/v1p02
-###RUN cp -rf /src/bless/v1p02/* /bin/
-###WORKDIR /bin
-#RUN make
-#RUN ln -s $(pwd)/bless /bin/
-#RUN ln -s $(pwd)/kmc/bin/kmc /bin/
 
-#RUN echo "export PATH=${PATH}:/src/bless/v1p02" >> ~/.bashrc && \
-#echo "alias bless='/src/bless/v1p02/bless'" >> ~/.bash_aliases && \
-#echo "source ~/.bash_aliases" >> ~/.bashrc
+RUN echo "export PATH=${PATH}:/src/bless/v1p02" >> ~/.bashrc && \
+echo "alias bless='/src/bless/v1p02/bless'" >> ~/.bash_aliases && \
+echo "source ~/.bash_aliases" >> ~/.bashrc
 
-#ADD docker_helper.sh /src/bless/v1p02/
+ADD docker_helper.sh /src/bless/v1p02/
 
 #WORKDIR /home/working
 #VOLUME /home/working
 #RUN chmod -R a+rw /home/working
 #ENV PATH="/src/bless/v1p02:${PATH}"
 
-#ENTRYPOINT ["/src/bless/v1p02/docker_helper.sh"]
+ENTRYPOINT ["/src/bless/v1p02/docker_helper.sh"]
