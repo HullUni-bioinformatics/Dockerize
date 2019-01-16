@@ -20,12 +20,13 @@ RUN wget -P /src/bless/ http://sourceforge.net/projects/bless-ec/files/bless.v1p
 #	ln -s $(pwd)/bless /bin/ && \
 
 ADD bless_iterate_over_ks.sh /bin/ 
-
 RUN echo "export PATH=${PATH}:/src/bless/v1p02" >> ~/.bashrc && \
 echo "alias bless='/src/bless/v1p02/bless'" >> ~/.bash_aliases && \
 echo "source ~/.bash_aliases" >> ~/.bashrc
 
 ADD docker_helper.sh /src/bless/v1p02/
+
+RUN chmod +x /bin/bless_iterate_over_ks.sh && chmod +x /src/bless/v1p02/docker_helper.sh
 
 #WORKDIR /home/working
 #VOLUME /home/working

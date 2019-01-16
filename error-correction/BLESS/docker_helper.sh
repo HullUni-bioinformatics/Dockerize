@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 . ~/.bashrc
 
@@ -17,6 +17,10 @@
 if [ "$1" == "/bin/bash" ]
 then
 	/bin/bash -c bash
+elif [ "$1" == "bless" ]
+then
+	shift
+	exec /src/bless/v1p02/bless "$@"
 else
 	exec "$@"
 fi
